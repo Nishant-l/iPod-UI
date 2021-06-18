@@ -93,7 +93,12 @@ code {
 
 }
 .display-body img{
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+.App{
+  margin-top: 20vh;
 }

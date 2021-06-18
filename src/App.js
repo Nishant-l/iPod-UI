@@ -15,16 +15,16 @@ class App extends React.Component {
     let screen=document.querySelector('.display-body');
     let imgg=screen.querySelector('img');
     let {count}=this.state;
-    if(count==0){
+    if(count===0){
       imgg.setAttribute('src',"https://www.nicepng.com/png/detail/209-2099634_adult-content-safesearch-headphones-music-listen-music.png");
     }
-    else if(count==1){
+    else if(count===1){
       imgg.setAttribute('src',"https://www.wallpaperup.com/uploads/wallpapers/2013/12/02/182118/37670e051fdbf2f0a0ede624bd78004b-700.jpg");
     }
-    else if(count==2){
+    else if(count===2){
       imgg.setAttribute('src',"https://i.pinimg.com/originals/2d/1d/1b/2d1d1be4885faf57c86bc4f306e9d805.jpg")
     }
-    else if(count==3){
+    else if(count===3){
       imgg.setAttribute('src',"https://i.pinimg.com/originals/1d/15/7a/1d157ac15b99f15588638b5b67cd2966.png")
     }
     console.log(count);
@@ -32,20 +32,21 @@ class App extends React.Component {
     // e.stopPropogate();
     e.stopPropagation();
   }
-  
+  // rendering the App
   render(){
     return (
       <div className="App">
-        <h1>iPod-UI</h1>
         <Display />
         <Controls getState={this.getState}/>
       </div>
     );
   }
+  // --------------------------------------------------------------------------
   componentDidUpdate(){
     console.log('didUpdate');
   }
 
+// adding controller to regester rotate event after the component is mounted
   componentDidMount(){
     console.log('mounted')
     // var currentAngle=0;
@@ -72,19 +73,19 @@ class App extends React.Component {
         count%=4;
         this.state.count=count;
         console.log('😋😋😋😋😋😋😋😋😋😋😋😋😋😋'+count);
-        if(count==0){
+        if(count===0){
           list.map((ele)=>{ele.classList.remove('active')});
           div1.classList.toggle('active');
         }
-        if(count==1){
+        if(count===1){
           list.map((ele)=>{ele.classList.remove('active')});
           div2.classList.toggle('active');
         }
-        if(count==2){
+        if(count===2){
           list.map((ele)=>{ele.classList.remove('active')});
           div3.classList.toggle('active');
         } 
-        if(count==3){
+        if(count===3){
           list.map((ele)=>{ele.classList.remove('active')});
           div4.classList.toggle('active');
         }
@@ -99,19 +100,19 @@ class App extends React.Component {
         count=(count+4)%(-4);
         this.state.count=count;
         console.log('😋😋😋😋😋😋😋😋😋😋😋😋😋😋'+count);
-        if(count==0){
+        if(count===0){
           list.map((ele)=>{ele.classList.remove('active')});
           div1.classList.toggle('active');
         }
-        if(count==1){
+        if(count===1){
           list.map((ele)=>{ele.classList.remove('active')});
           div2.classList.toggle('active');
         }
-        if(count==2){
+        if(count===2){
           list.map((ele)=>{ele.classList.remove('active')});
           div3.classList.toggle('active');
         } 
-        if(count==3){
+        if(count===3){
           list.map((ele)=>{ele.classList.remove('active')});
           div4.classList.toggle('active');
         }
@@ -122,11 +123,6 @@ class App extends React.Component {
   }
 
 }
-
-const style={
-  a:{
-    backgroundColor:'black'
-  }
-}
+// ----------------------------------------------------------------------------------------
 
 export default App;

@@ -1,6 +1,5 @@
 import { div } from 'prelude-ls';
 import React from 'react';
-import ZingTouch from 'zingtouch';
 
 class Controls extends React.Component{
     render(){
@@ -13,7 +12,6 @@ class Controls extends React.Component{
                     <div style={style.menu}>Menu</div>
                     <div style={style.pause}>||</div>
                 </div>
-                <div className="outputt" style={style.out}>output</div>
             </div>
         );
     }
