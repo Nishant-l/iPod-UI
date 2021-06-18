@@ -37,11 +37,16 @@ class App extends React.Component {
     return (
       <div className="App">
         <Display />
-        <Controls getState={this.getState}/>
+        <Controls getState={this.getState} menuu={this.toggleMenu}/>
       </div>
     );
   }
   // --------------------------------------------------------------------------
+  toggleMenu=()=>{
+    let menu=document.querySelector('.Aside-list');
+    // console.log(menu.getAttribute('visibility'));
+    console.log(menu);
+  }
   componentDidUpdate(){
     console.log('didUpdate');
   }

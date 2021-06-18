@@ -9,7 +9,7 @@ class Controls extends React.Component{
                     <button className='select-button' onClick={(e)=>{e.stopPropagation();this.props.getState(e)}}></button>
                     <div style={style.forword}>=...</div>
                     <div style={style.back}>...=</div>
-                    <div style={style.menu}>Menu</div>
+                    <div style={style.menu} onClick={()=>{this.props.menuu()}}>Menu</div>
                     <div style={style.pause}>||</div>
                 </div>
             </div>

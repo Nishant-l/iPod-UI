@@ -65,6 +65,7 @@ code {
   border-top-right-radius: 9px;
   background-color: white;
   position: absolute;
+  /* visibility: collapse; */
 }
 .active{
   background-color:rgb(113 113 245 / 91%);;
