@@ -13,22 +13,24 @@ class App extends React.Component {
 
   getState=(e)=>{
     let screen=document.querySelector('.display-body');
+    let imgg=screen.querySelector('img');
     let {count}=this.state;
     if(count==0){
-      screen.style.backgroundColor='black';
+      imgg.setAttribute('src',"https://www.nicepng.com/png/detail/209-2099634_adult-content-safesearch-headphones-music-listen-music.png");
     }
     else if(count==1){
-      screen.style.backgroundColor='brown';
+      imgg.setAttribute('src',"https://www.wallpaperup.com/uploads/wallpapers/2013/12/02/182118/37670e051fdbf2f0a0ede624bd78004b-700.jpg");
     }
     else if(count==2){
-      screen.style.backgroundColor='yellow';
+      imgg.setAttribute('src',"https://i.pinimg.com/originals/2d/1d/1b/2d1d1be4885faf57c86bc4f306e9d805.jpg")
     }
     else if(count==3){
-      screen.style.backgroundColor='red';
+      imgg.setAttribute('src',"https://i.pinimg.com/originals/1d/15/7a/1d157ac15b99f15588638b5b67cd2966.png")
     }
     console.log(count);
     console.log(e);
-    e.stopPropogate();
+    // e.stopPropogate();
+    e.stopPropagation();
   }
   
   render(){
@@ -42,11 +44,6 @@ class App extends React.Component {
   }
   componentDidUpdate(){
     console.log('didUpdate');
-    // let changeAngle=Math.abs(this.state.angle-e.detail.angle);
-    //   if(changeAngle>15){
-    //     this.setState({angle:e.detail.angle})
-    //     // console.log('wowo');
-    //   }
   }
 
   componentDidMount(){
@@ -68,7 +65,7 @@ class App extends React.Component {
     myRegion.bind(target, 'rotate', (e)=>{
       // console.log(e.detail);
       // if rotated in clockwise direction
-      if(Math.abs(e.detail.angle-prevAng)>20 && e.detail.distanceFromOrigin-prevDistFO>0){
+      if(Math.abs(e.detail.angle-prevAng)>20 && e.detail.distanceFromOrigin-prevDistFO>30){
         prevAng=e.detail.angle;
         prevDistFO=e.detail.distanceFromOrigin;
         count++;
@@ -95,7 +92,7 @@ class App extends React.Component {
       // ------------------------------------------------------------------------------
 
       // if rotated in anticlock direction
-      else if(Math.abs(e.detail.angle-prevAng)>20 && e.detail.distanceFromOrigin-prevDistFO<0){
+      else if(Math.abs(e.detail.angle-prevAng)>20 && e.detail.distanceFromOrigin-prevDistFO<-30){
         prevAng=e.detail.angle;
         prevDistFO=e.detail.distanceFromOrigin;
         count--;
@@ -126,6 +123,10 @@ class App extends React.Component {
 
 }
 
-
+const style={
+  a:{
+    backgroundColor:'black'
+  }
+}
 
 export default App;

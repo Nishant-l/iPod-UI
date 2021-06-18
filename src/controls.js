@@ -1,15 +1,13 @@
 import { div } from 'prelude-ls';
 import React from 'react';
 import ZingTouch from 'zingtouch';
-// import './index.css'
-
 
 class Controls extends React.Component{
     render(){
         return(
             <div className='controls-background'>
                 <div className='circular-contral'>
-                    <div className='select-button' onClick={(e)=>{this.props.getState(e)}}></div>
+                    <button className='select-button' onClick={(e)=>{e.stopPropagation();this.props.getState(e)}}></button>
                     <div style={style.forword}>=...</div>
                     <div style={style.back}>...=</div>
                     <div style={style.menu}>Menu</div>
@@ -19,32 +17,6 @@ class Controls extends React.Component{
             </div>
         );
     }
-
-// componentDidMount()
-// {
-//     var currentAngle=0;
-//     var target = document.querySelector('.circular-contral');
-//     var region = new ZingTouch.Region(target);
-
-//     region.bind(target, 'rotate', function(e) {
-//       setOutput([
-//         ['Gesture', 'Rotate'],
-//         ['angle', Math.floor(e.detail.angle) + "°"],
-//         ['distanceFromOrigin', Math.floor(e.detail.distanceFromOrigin) + "°"],
-//         ['distanceFromLast', Math.floor(e.detail.distanceFromLast) + "°"]
-//       ]);
-
-//     });
-
-//     function setOutput(data) {
-//       var outputStr = "> ";
-//       for (var i = 0; i < data.length; i++) {
-//         outputStr += data[i][0] + ": " + data[i][1] + ((i === data.length - 1) ? '' : ' , ');
-//       }
-//       var output = document.querySelector('.outputt');
-//       output.innerHTML = outputStr;
-//     }   
-//     }
 }
 
 

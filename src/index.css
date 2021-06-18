@@ -14,51 +14,86 @@ code {
 
 .controls-background{
   height: 200px;
-  width: 200px;
+  width: 260px;
   background-color: rgb(192, 186, 186);
   border-radius: 10px;
   border-top-left-radius:0px ;
   border-top-right-radius: 0px;
   margin: auto;
   position: relative;
+  border: 2px solid black;
   /* display: flex; */
 }
 .circular-contral{
   height: 80%;
-  width: 80%;
+  width: 65%;
   background-color: white;
   border-radius: 50%;
   /* margin: auto; */
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 17%;
   /* transform: rotate(90deg); */
 }
 .select-button{
-  height: 50%;
-  width: 50%;
+  height: 35%;
+  width: 35%;
   background-color: rgb(192 186 186);
   border-radius: 50%;
   /* margin: auto; */
   position: absolute;
-  top: 25%;
-  left: 25%;
+  top: 33%;
+  left: 32%;
 }
 .display-body{
   background-color:pink;
   border-radius: 10px;
   border-bottom-left-radius:0px ;
   border-bottom-right-radius: 0px;
+  border: 2px solid black;
+  border-bottom: none;
   /* border:2px solid black; */
 }
 .Aside-list{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-around;
-    width: 30%;
-    border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  width: 38%;
+  /* border: 2px solid red; */
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  background-color: white;
+  position: absolute;
 }
 .active{
-  background-color: blueviolet;
+  background-color:rgb(113 113 245 / 91%);;
+  border-radius: 2px;
+}
+.div1{
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+.div2{
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+.div3{
+  display: flex;
+  height: 50px;
+  align-items: center;
+
+}
+.div4{
+  display: flex;
+  height: 50px;
+  align-items: center;
+
+}
+.display-body img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
